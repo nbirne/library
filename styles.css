@@ -1,0 +1,137 @@
+body {
+    text-align: center;
+    background-color: #EEEEEC;
+    color: #393e46;
+}
+
+body, button {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+hr {
+    margin: 20px;
+}
+
+input, select, button {
+    padding: 5px 7px;
+    background-color: #CBE1E0;
+    border-radius: 4px;
+    border: 1px solid #393e46;
+}
+
+button:hover, select:hover, svg:hover {
+    cursor: pointer;
+}
+
+input, label {
+    display: block;
+}
+
+button {
+    border: 1px solid black;
+}
+
+button:focus, select:focus, input:focus {
+    outline: none;
+    border: 1px solid #FFAE70;
+}
+
+.input-group {
+    float: left;
+    margin: 0 4px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-style: italic;
+}
+
+.read p {
+    display: inline;
+}
+
+.trash {
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    fill: #EB4781;
+}
+
+label {
+    text-align: left;
+    margin: 2px;
+}
+
+.card, #log {
+    padding: 30px 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;
+}
+
+#container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    grid-template-rows: 199px;
+}
+
+#form-grid {
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+}
+
+#form-row-1 {
+    margin: auto;
+}
+
+#submit {
+    display: block;
+    margin: auto;
+}
+
+#add-book-button {
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.hide-form {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0s, opacity 0.7s linear;
+}
+
+.show-form {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+.read-book {
+    background-color: #84B4D7;
+}
+
+.read-book button {
+    background-color: #CBE1E0;
+}
+
+.unread-book button {
+    background-color: #F7B6CD;
+}
+
+#log {
+    background-color: #64A6A2;
+    color: #EEEEEC;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Library</title>
+
+    <!--Icon from the Twemoji project.-->
+    <link rel="icon" href="favicon-32x32.png">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>My Library</h1>
+        <button id="add-book-button" type="button">Add Book</button>
+        <form id="add-book-form" class="hide-form">
+            <div id="form-grid">
+                <div id="form-row-1">
+                    <div class="input-group">
+                        <label for="title">Title:</label>
+                        <input id="title" type="text" placeholder="A Gentleman In Moscow">
+                    </div>
+                    <div class="input-group">
+                        <label for="author">Author:</label>
+                        <input id="author" type="text" placeholder="Amor Towles">
+                    </div>
+                    <div class="input-group">
+                        <label for="pages">Pages:</label>
+                        <input id="pages" type="text" placeholder="462">
+                    </div>
+                    <div class="input-group">
+                        <label for="read">Status:</label>
+                        <select id="read" placeholder="Read">
+                            <option value="Read">Read</option>
+                            <option value="Not Read">Not Read</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="form-row-2">
+                    <button id="submit" type="submit" value="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div> 
+
+    <hr>
+
+    <div id="container">
+        <div id="log">
+            <h2>Your Reading Log</h2>
+            <p id="bookCount">Books Read: 0</p>
+            <p id="pageCount">Pages Read: 0</p>
+        </div>
+    </div>
+
+    <template id="cardTemplate">
+        <div class="card">
+            <!--Trash svg from zondicons.com-->
+            <svg class="trash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6 2l2-2h4l2 2h4v2H2V2h4zM3 6h14l-1 14H4L3 6zm5 2v10h1V8H8zm3 0v10h1V8h-1z"/></svg>
+            <h2 class="title"></h2>
+            <p class="author"></p>
+            <p class="pages"></p>
+            <div class="read">
+                <p></p>
+                <button></button>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
