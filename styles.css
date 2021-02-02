@@ -21,10 +21,15 @@ hr {
 }
 
 input, select, button {
-    padding: 5px 7px;
+    padding: 8px 7px;
     background-color: #CBE1E0;
+    font-size: 17px;
     border-radius: 4px;
     border: 1px solid #393e46;
+}
+
+select {
+    height: 38px;
 }
 
 button:hover, select:hover, svg:hover {
@@ -33,10 +38,6 @@ button:hover, select:hover, svg:hover {
 
 input, label {
     display: block;
-}
-
-button {
-    border: 1px solid black;
 }
 
 button:focus, select:focus, input:focus {
@@ -76,6 +77,10 @@ label {
     border-radius: 10px;
     border: 1px solid black;
     position: relative;
+}
+
+.card:hover, #log:hover, button:hover, input:hover, select:hover {
+    box-shadow: 0px 0px 15px -6px rgba(57,62,70,0.61);
 }
 
 #container {
