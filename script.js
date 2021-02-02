@@ -39,14 +39,14 @@ Book.prototype.toggleRead = function() {
 }
 
 Book.prototype.deleteBook = function() {
-  // Remove book from library array
-  myLibrary.splice(this.index, 1);
-  populateStorage();
   // Remove book from display
   document.querySelectorAll(".card")[this.index].remove();
+  // Remove book from library array
+  myLibrary.splice(this.index, 1);
   // Update index for each book
   myLibrary.forEach((book, index) => book.index = index);
-  
+
+  populateStorage();
   updateLog();
 }
 
@@ -97,10 +97,9 @@ function toggleForm() {
 
 document.getElementById("add-book-form").addEventListener("submit", addBookToLibrary);
 document.getElementById("add-book-button").addEventListener("click", toggleForm);
-myLibrary.push(new Book("A Gentleman In Moscow", "Amor Towles", "462", "Not Read"));
 
 // On page load, set up myLibrary with stored list of books
-function setStyles() {
+function setLibrary() {
   myLibrary = JSON.parse(localStorage.getItem("libraryStorage") || "[]");
   // Give stored books access to the Book prototype
   myLibrary.forEach((obj, index) => myLibrary[index] = Object.assign(new Book(), obj));
@@ -113,10 +112,13 @@ function populateStorage() {
 
 // Retrieve library from local storage
 if(!localStorage.getItem("libraryStorage")) {
+  myLibrary.push(new Book("A Gentleman In Moscow", "Amor Towles", "462", "Not Read"));
   populateStorage();
 } else {
-  setStyles();
+  setLibrary();
 }
+
+console.log(myLibrary);
 
 displayLibrary();
 updateLog();

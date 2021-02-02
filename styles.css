@@ -80,7 +80,11 @@ label {
 }
 
 .card:hover, #log:hover, button:hover, input:hover, select:hover {
-    box-shadow: 0px 0px 15px -6px rgba(57,62,70,0.61);
+    box-shadow: 0px 0px 15px -6px rgba(140,132,105, 0.7);
+}
+
+.card {
+    transition: .15s;
 }
 
 #container {
@@ -88,7 +92,7 @@ label {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 20px;
-    grid-template-rows: 199px;
+    grid-template-rows: 220px;
 }
 
 #form-grid {
